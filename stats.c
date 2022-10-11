@@ -21,12 +21,12 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
         
         for(int i=0;i<=setlength-1;i++)
         {
-            sum+=*numberset;
-            if(min<*numberset)
-                min=*numberset;
-            if(max>*numberset)
-                max=*numberset;
-           numberset++;  
+            sum+=numberset[i];
+            if(min<numberset[i])
+                min=numberset[i];
+            if(max>numberset[i])
+                max=numberset[i];
+            
         }
        
         s.average=sum/setlength;
@@ -42,11 +42,11 @@ int ledAlertCallCount = 0;
 
 void ledAlerter(void)
 {
-    
+    ledAlertCallCount++;
 }
 void emailAlerter(void)
 {
-    
+ emailAlertCallCount++;   
 }
 
 void check_and_alert(float maxThreshold, alerter_funcptr alert_array[], Stats computedStats)
