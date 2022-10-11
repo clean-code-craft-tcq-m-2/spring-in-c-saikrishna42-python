@@ -19,7 +19,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     else
     {
         
-        for(i=0;i<=setlength-1;i++)
+        for(int i=0;i<=setlength-1;i++)
         {
             sum+=*numberset;
             if(min<*numberset)
