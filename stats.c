@@ -22,7 +22,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
         for(int i=0;i<=setlength-1;i++)
         {
             sum+=numberset[i];
-            if(min<numberset[i])
+            if(min>numberset[i])
                 min=numberset[i];
             if(numberset[i]>max)
                 max=numberset[i];
