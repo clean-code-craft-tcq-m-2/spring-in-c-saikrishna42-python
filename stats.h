@@ -1,4 +1,4 @@
-struct Status
+struct Stats
 {
   float average;
   float min;
