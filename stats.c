@@ -49,7 +49,7 @@ void emailAlerter(void)
     
 }
 
-void check_and_alert(float maxThreshold, alerter_funcptr alert_array[], Stats_t computedStats)
+void check_and_alert(float maxThreshold, alerter_funcptr alert_array[], Stats computedStats)
 {
 	if (computedStats.max > maxThreshold)
 	{
